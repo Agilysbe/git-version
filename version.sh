@@ -11,7 +11,7 @@ get_next_version () {
     
     PATCH=$(echo "$CURRENTTAG" | cut -d'.' -f 3)
     
-    if [[ $GITDESCRIPTION = *"patch"* || $GITDESCRIPTION = *":fire:"* || $GITDESCRIPTION = *":bug"* || $GITDESCRIPTION = *":poop"* ]]; then
+    if [[ $GITDESCRIPTION = *"patch"* || $GITDESCRIPTION = *":fire:"* || $GITDESCRIPTION = *":bug:"* || $GITDESCRIPTION = *":poop:"* ]]; then
         PATCH=$(($PATCH + 1))
         echo "$MAJOR.$MINOR.$PATCH"
     else
